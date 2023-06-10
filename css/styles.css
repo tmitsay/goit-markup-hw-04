@@ -108,6 +108,22 @@ img {
   gap: 40px;
 }
 
+.header-menu-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-nav);
+  padding: 24px 0;
+  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus {
+  color: var(--color-button);
+}
+
 .current {
   color: #404bbf;
   position: relative;
@@ -125,20 +141,6 @@ img {
   bottom: -1px;
 }
 
-.header-menu-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--color-nav);
-  padding: 24px 0;
-  display: block;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.header-menu-link:hover,
-.header-menu-link:focus {
-  color: var(--color-button);
-}
 /*! --------------ADDRESS---------------- */
 .header-add {
   font-style: normal;
@@ -307,6 +309,7 @@ img {
 .team-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
 }
 
 .container-card {
@@ -354,7 +357,6 @@ img {
 .icons-list-item {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons-link {
@@ -363,10 +365,11 @@ img {
   background-color: var(--text-logo);
   border-radius: 50%;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   padding: 12px;
   margin-left: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons-link:hover,
@@ -642,15 +645,8 @@ img {
 }
 
 .menu-link {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   display: block;
-}
-
-.menu-link:hover,
-.menu-link:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transform: translateY(0%);
 }
 
 .menu-title {
@@ -668,15 +664,6 @@ img {
   color: var(--color-text);
 }
 
-.menu-link:hover .menu-cover-text .menu-link:focus .menu-cover-text {
-  transform: translateY(0%);
-}
-
-.menu-block-cover {
-  position: relative;
-  overflow: hidden;
-}
-
 .menu-cover-text {
   position: absolute;
   top: 0;
@@ -690,6 +677,25 @@ img {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-block-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-link:hover .menu-cover-text {
+  transform: translateY(0%);
+}
+
+.menu-link:focus .menu-cover-text {
+  transform: translateY(0%);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .container-block {
