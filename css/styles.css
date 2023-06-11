@@ -350,7 +350,7 @@ img {
 
 .icons-list {
   display: flex;
-  justify-items: center;
+  justify-content: center;
   gap: 24px;
 }
 
